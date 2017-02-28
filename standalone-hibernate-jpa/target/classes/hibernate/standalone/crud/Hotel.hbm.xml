@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.standalone.crud.Hotel" table="HOTEL">
+		<id name="hotelId" type="java.lang.Long">
+			<column name="HOTEL_ID" />
+			<generator class="identity" />
+		</id>
+		<property name="supplierCode" type="string">
+			<column name="SUPPLIER_CODE" length="10" not-null="true" />
+		</property>
+		<property name="supplierCity" type="string">
+			<column name="SUPPLIER_CITY" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
